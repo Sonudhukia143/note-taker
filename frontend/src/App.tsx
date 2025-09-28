@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -28,6 +29,26 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+=======
+import { useContext } from 'react';
+import './App.css'
+import { AuthContext } from './context/AuthContext';
+import AuthService from './routes/AuthService';
+import Dashboard from './routes/Dashboard';
+
+function App() {
+  const { user } = useContext(AuthContext);
+
+  return (
+    <>
+      {
+        !user
+          ?
+          <AuthService />
+          :
+          <Dashboard />
+      }
+>>>>>>> dfc1501 (AuthIntegration : Authorization for backend and frontend complete and backend and frontend integration complete locally)
     </>
   )
 }

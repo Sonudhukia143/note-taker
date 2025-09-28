@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { createAuthRouter } from './routes/authRoute';
 
 dotenv.config();
 
@@ -27,7 +28,7 @@ app.use(express.json());
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI!);
+        await mongoose.connect(process.env.MONGO_URL!);
         console.log('MongoDB connected');
     } catch (error) {
         console.error('MongoDB connection error:', error);
@@ -37,7 +38,7 @@ const connectDB = async () => {
 connectDB();
 
 // Routes
-
+app.use('/api/auth', createAuthRouter());
 app.get('/api/test', (_req:any, res:any) => {
     res.send('Server is running and this is the new test endpoint is working and this is a new change!');
 });
