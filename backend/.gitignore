@@ -1,0 +1,10 @@
+.env
+
+package-lock.json
+node_modules
+
+<<<<<<< HEAD
+dist
+=======
+dist
+>>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
