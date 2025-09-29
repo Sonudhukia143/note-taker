@@ -17,8 +17,6 @@ export interface OtpType {
     otp: String,
     expiresAt: Date,
     attempts: Number
-<<<<<<< HEAD
-=======
 }
 
 export interface NoteType {
@@ -26,5 +24,4 @@ export interface NoteType {
     title: string;
     content: string;
     isLive: boolean;
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
 }

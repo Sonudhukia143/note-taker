@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import { OTP } from '@/models/Otp';
-import User from '@/models/User';
-import { OtpType, UserType } from '@/types';
-=======
 import { NOTE } from '@/models/Note';
 import { OTP } from '@/models/Otp';
 import User from '@/models/User';
 import { NoteType, OtpType, UserType } from '@/types';
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
 import generateToken from '@/utils/generateToken';
 import sendVerificationOtp from '@/utils/nodemailer';
 import { Request, Response } from 'express';
@@ -104,11 +98,7 @@ export class AuthService {
     async verifyotp(req: Request, res: Response) {
         try {
             const { email, username, dob, otp } = req.body;
-<<<<<<< HEAD
-            if(!otp) return res.status(400).json({ message: "OTP is required" });
-=======
             if (!otp) return res.status(400).json({ message: "OTP is required" });
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
             if (Number(otp) < 1000 || Number(otp) > 9999) return res.status(400).json({ message: "Invalid OTP" });
 
             const isOtpSent: OtpType | null = await OTP.findOne({ email });
@@ -149,8 +139,6 @@ export class AuthService {
             return res.status(404).json({ message: error });
         }
     }
-<<<<<<< HEAD
-=======
 
     async syncNotes(req: Request, res: Response) {
         try {
@@ -187,5 +175,4 @@ export class AuthService {
             return res.status(500).json({ message: "Internal server error" });
         }
     }
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
 }

@@ -27,8 +27,6 @@ export function createAuthRouter(): Router {
     return await authService.verifyotp(req, res);
   });
 
-<<<<<<< HEAD
-=======
   router.post('/sync' , async (req: Request, res: Response) => {
     const NOTE = req.body;
     if (!NOTE) return res.status(400).json({ message: "Note data is required" });
@@ -36,6 +34,5 @@ export function createAuthRouter(): Router {
     return await authService.syncNotes(req, res);
   })
 
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
   return router;
 }
