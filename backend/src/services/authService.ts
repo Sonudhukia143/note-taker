@@ -1,9 +1,9 @@
-import { NOTE } from '@/models/Note';
-import { OTP } from '@/models/Otp';
-import User from '@/models/User';
-import { NoteType, OtpType, UserType } from '@/types';
-import generateToken from '@/utils/generateToken';
-import sendVerificationOtp from '@/utils/nodemailer';
+import { NOTE } from '../models/Note.js';
+import { OTP } from '../models/Otp.js';
+import User from '../models/User.js';
+import { NoteType, OtpType, UserType } from '../types/index.js';
+import generateToken from '../utils/generateToken.js';
+import sendVerificationOtp from '../utils/nodemailer.js';
 import { Request, Response } from 'express';
 
 export class AuthService {
