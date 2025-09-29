@@ -28,7 +28,7 @@ export default function SignUp({ toggleSignUp }: ToggleSignUp) {
                 setLoading(true);
                 e.preventDefault();
 
-                const res = await fetch("http://localhost:3000/api/auth/verify", {
+                const res = await fetch("https://note-taker-qbu2.onrender.com/api/auth/verify", {
                     method: "POST",
                     body: JSON.stringify({ ...formData, otp: otp.join("") }),
                     headers: {
@@ -56,7 +56,7 @@ export default function SignUp({ toggleSignUp }: ToggleSignUp) {
         try {
             setLoading(true);
 
-            const res = await fetch("http://localhost:3000/api/auth/register", {
+            const res = await fetch("https://note-taker-qbu2.onrender.com/api/auth/register", {
                 method: "POST",
                 body: JSON.stringify(formData),
                 headers: {

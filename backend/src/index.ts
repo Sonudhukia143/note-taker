@@ -12,7 +12,7 @@ const app = express();
 const allowedOrigins = [
     'http://localhost:5173',
     process.env.CLIENT_URL,
-    'https://client-e3ad.onrender.com'
+    'https://notestakers.netlify.app/'
 ].filter(Boolean); // Remove any undefined values
 
 const corsOptions = {

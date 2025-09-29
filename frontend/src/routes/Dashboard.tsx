@@ -49,7 +49,7 @@ export default function Dashboard() {
         setLoading(true);
 
         try {
-            const res = await fetch("http://localhost:3000/api/auth/sync", {
+            const res = await fetch("https://note-taker-qbu2.onrender.com/api/auth/sync", {
                 method: "POST",
                 body: JSON.stringify(notes.filter((note) => note.isLive === false)),
                 headers: {
