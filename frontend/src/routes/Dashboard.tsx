@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-export default function Dashboard () {
-    return (
-        <h1>Dashboard</h1>
-    )
-}
-=======
 import { useContext, useState, type JSX } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ArrowPathIcon } from "@heroicons/react/16/solid";
@@ -170,4 +163,3 @@ export default function Dashboard() {
         </div>
     );
 }
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)

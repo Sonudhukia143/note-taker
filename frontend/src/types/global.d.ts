@@ -22,8 +22,6 @@ declare global {
         loading: boolean;
         setLoading: (loading: boolean) => void;
     };
-<<<<<<< HEAD
-=======
 
     interface Note {
         id: number | string;
@@ -38,5 +36,4 @@ declare global {
         content: string;
         isLive: boolean;
     }
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
 }
