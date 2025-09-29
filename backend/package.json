@@ -53,6 +53,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.3",
     "nodemailer": "^7.0.6",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "@types/node": "^24.5.2"
   }
 }
