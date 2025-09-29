@@ -12,7 +12,7 @@ function App() {
     <>
       <FlashMessage type="success" message="Welcome to Note Taker App!" duration={3000} />
       {
-        user
+        !user
           ?
           <AuthService />
           :
