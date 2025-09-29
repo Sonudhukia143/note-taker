@@ -10,22 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
-=======
-=======
-    "@heroicons/react": "^2.2.0",
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
-    "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "@heroicons/react": "^2.2.0",
+    "@tailwindcss/vite": "^4.1.13",
     "react-router-dom": "^7.9.3"
-<<<<<<< HEAD
->>>>>>> dfc1501 (AuthIntegration : Authorization for backend and frontend complete and backend and frontend integration complete locally)
-=======
->>>>>>> 60c2d84 (Dashboard : Note data and Dashboard add with live sync service)
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
