@@ -51,7 +51,7 @@
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.18.2",
+    "mongoose": "^8.18.3",
     "nodemailer": "^7.0.6",
     "tsconfig-paths": "^4.2.0"
   }
