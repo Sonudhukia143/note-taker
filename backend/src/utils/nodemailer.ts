@@ -8,6 +8,7 @@ dotenv.config();
 // currently render donot send stmp requests so using gmail for now
 // also refreshToken only gives access for 7 days and requires additional setup
 // to keep the token refreshed automatically
+
 // const transporter = nodemailer.createTransport({
 //   service: "gmail",
 //   auth: {
@@ -19,8 +20,16 @@ dotenv.config();
 //     },
 // });
 
-// Create transporter using Oauth App password after enabling 2 step verification
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("SMTP Connection Error:", error);
+  } else {
+    console.log("SMTP server is ready to take messages:", success);
+  }
+});
 
+
+// Create transporter using Oauth App password after enabling 2 step verification
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
