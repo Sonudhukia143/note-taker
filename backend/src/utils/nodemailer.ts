@@ -20,14 +20,6 @@ dotenv.config();
 //     },
 // });
 
-transporter.verify((error, success) => {
-  if (error) {
-    console.error("SMTP Connection Error:", error);
-  } else {
-    console.log("SMTP server is ready to take messages:", success);
-  }
-});
-
 
 // Create transporter using Oauth App password after enabling 2 step verification
 const transporter = nodemailer.createTransport({
@@ -36,6 +28,14 @@ const transporter = nodemailer.createTransport({
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS,
   },
+});
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("SMTP Connection Error:", error);
+  } else {
+    console.log("SMTP server is ready to take messages:", success);
+  }
 });
 
 export default async function sendVerificationOtp(email: string, otp: string | number) {
