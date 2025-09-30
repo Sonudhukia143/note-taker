@@ -50,6 +50,8 @@ export default function SignIn({ toggleSignUp }: ToggleSignUp) {
 
     const signIn = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        console.log(formData);
+        console.log("Signing In");
 
         try {
             setLoading(true);
@@ -61,6 +63,7 @@ export default function SignIn({ toggleSignUp }: ToggleSignUp) {
                     "Content-Type": "application/json"
                 }
             });
+            console.log(res);
 
             const data = await res.json();
             if (res.ok) {

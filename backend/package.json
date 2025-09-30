@@ -47,13 +47,13 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@types/node": "^24.5.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.18.3",
     "nodemailer": "^7.0.6",
-    "tsconfig-paths": "^4.2.0",
-    "@types/node": "^24.5.2"
+    "tsconfig-paths": "^4.2.0"
   }
 }

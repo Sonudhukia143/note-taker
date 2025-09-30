@@ -4,15 +4,29 @@ import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 dotenv.config();
 
+// this will work locally and is more production ready but 
+// currently render donot send stmp requests so using gmail for now
+// also refreshToken only gives access for 7 days and requires additional setup
+// to keep the token refreshed automatically
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     type: "OAuth2",
+//     user: "jagdishdhukia770@gmail.com",
+//     clientId: process.env.NODEMAILER_CLIENT_ID, 
+//     clientSecret: process.env.NODEMAILER_CLIENT_SECRET,
+//     refreshToken: process.env.NODEMAILER_REFRESH_TOKEN
+//     },
+// });
+
+// Create transporter using Oauth App password after enabling 2 step verification
+
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    type: "OAuth2",
-    user: "jagdishdhukia770@gmail.com",
-    clientId: process.env.NODEMAILER_CLIENT_ID, 
-    clientSecret: process.env.NODEMAILER_CLIENT_SECRET,
-    refreshToken: process.env.NODEMAILER_REFRESH_TOKEN
-    },
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_PASS,
+  },
 });
 
 export default async function sendVerificationOtp(email: string, otp: string | number) {
@@ -42,5 +56,3 @@ export default async function sendVerificationOtp(email: string, otp: string | n
         return false;
     }
 };
-
-

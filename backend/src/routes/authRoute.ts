@@ -15,6 +15,8 @@ export function createAuthRouter(): Router {
 
   router.post('/login', async (req: Request, res: Response) => {
     const { username, email } = req.body;
+            console.log("Login request received");
+
     if (!username || !email) return res.status(400).json({ message: "Username and email are required" });
 
     return await authService.login(req, res);

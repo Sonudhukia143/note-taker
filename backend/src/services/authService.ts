@@ -56,6 +56,7 @@ export class AuthService {
     }
 
     async login(req: Request, res: Response) {
+        console.log("Login request received");
         try {
             const { username, email } = req.body;
             if (!email || !username) return res.status(400).json({ message: "Email and username are required" });
